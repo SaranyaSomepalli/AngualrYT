@@ -1,0 +1,51 @@
+<p></p>
+<h1>Edit Video</h1>
+
+
+<div class="container">
+    <form [formGroup]="productFormGroup">
+        <div class="row">
+            <div class="col-lg-6">
+            <div class ="form-group">
+                <label for="">Video Title</label>
+                <input type="text" formControlName="videoTitle" class="form-control">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class ="form-group">
+                <label for="">Channel Name</label>
+                <input type="text" formControlName="channelName" class="form-control">
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class ="form-group">
+                <label for="">Views</label>
+                <textarea formControlName="views" class="form-control" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class ="form-group">
+                <label for="">Duration</label>
+                <textarea formControlName="duration" class="form-control" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class ="form-group">
+                <label for="">Time</label>
+                <textarea formControlName="time" class="form-control" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+    </div>
+
+     
+    <div class="row">
+        <div class="col-lg-6">
+            <button  (click) ="submitForm()" class="btn btn-primary">Update</button>
+        </div>
+    </div>
+
+    </form>
+</div>

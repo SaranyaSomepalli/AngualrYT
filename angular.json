@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "4592ee04-8fdd-4855-98df-3d6217f36a4b"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -28,9 +31,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@fortawesome/fontawesome-free/js/all.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -91,9 +97,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "node_modules/@fortawesome/fontawesome-free/js/all.js"
+            ]
           }
         },
         "lint": {

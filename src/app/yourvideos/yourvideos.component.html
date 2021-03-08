@@ -1,0 +1,21 @@
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<!--CRUD-->
+<h1 style="color:red;">Your Posted Videos</h1>
+<p style="color:green;">Login successful!! Now you can add/delete/update your videos</p>
+<div>
+    <button routerLink="/create" class="btn btn-primary" style="float: right;">Upload</button>
+ 
+  </div>
+<div class="row">
+    
+    <div class="col-lg-4 col-md-6 mb-4" *ngFor="let video of dataListing2">
+        <app-videos1  [videoData]="video"></app-videos1>
+       
+    </div>
+   
+  </div>

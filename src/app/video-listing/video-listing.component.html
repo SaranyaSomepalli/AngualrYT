@@ -1,0 +1,30 @@
+<p></p>
+
+
+   <div>
+     
+  
+   </div>
+    
+    <div class="categories">
+        <section class="category-section">
+          <button class="category active">All</button>
+          <button class="category">Category 1</button>
+          <button class="category">Category 2</button>
+          <button class="category">Category 3</button>
+          <button class="category">Category 4</button>
+          <button class="category">Category 5</button>
+          <button class="category">Category 6</button>
+          <button class="category">Category 7</button>
+          <button class="category">Category 8</button>
+          
+        </section>
+      </div>
+<div class="row">
+    
+    <div class="col-lg-4 col-md-6 mb-4" *ngFor="let video of dataListing">
+        <app-videos  [videoData]="video"></app-videos>
+       
+    </div>
+   
+  </div>

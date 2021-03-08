@@ -1,0 +1,33 @@
+<p>login</p>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<div class="container">
+    <h2>Login here</h2>
+    <form #loginform="ngForm" (ngSubmit)="loginUser()">
+        <small class="text-danger">{{msg}}</small>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control"  placeholder="Enter email" name="email"  [(ngModel)]="user.emailId" required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+        #email="ngModel"
+        [class.is-invalid] = "email.invalid && email.touched"
+        >
+    <!-- regular expression   <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email Id is required field</small>  -->
+            <div *ngIf="email.errors && (email.invalid && email.touched)">
+                <small class="text-danger" *ngIf="email.errors.required">Email Id is a required field</small>
+                <small class="text-danger" *ngIf="email.errors.pattern">Enter valid email id(ex:xyz@gmail.com)</small>
+            </div>
+        </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" placeholder="Enter password" name="password"  [(ngModel)]="user.password" required #password="ngModel"
+        [class.is-invalid] = "password.invalid && password.touched"
+        >
+        <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required field</small>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="remember"> Remember me</label>
+      </div>
+      <button type="submit" class="btn btn-info">Login</button>
+    </form>
+    <small class="float-right" (click)="gotoregistration()">New user? Register here</small>
+  </div>
+  
